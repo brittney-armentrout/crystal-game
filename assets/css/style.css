@@ -1,0 +1,39 @@
+body {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 34px;
+    color: black;
+    background-image: url(../images/congruent_pentagon.png);
+  }
+  
+* {
+    box-sizing: border-box;
+  }
+
+.jumbotron {
+    opacity: .75;
+    font-family: 'Crafty Girls', cursive;
+}
+
+img {
+    width: 100px;
+    height: 200px;
+    display: block;
+}
+
+.container {
+    background: url(../images/tree_bark.png);
+    opacity: .75;
+    width: 900px;
+    height: 300px;
+    text-align: center;
+    font-family: 'Walter Turncoat', cursive;
+    border: 1px solid black;
+}
+
+#rules {
+    font-family: 'Handlee', cursive;
+    text-align: left;
+    margin-left: 50px;
+}
