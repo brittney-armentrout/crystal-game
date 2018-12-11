@@ -21,37 +21,15 @@
 //Global Variables
 var targetScore = 0;
 var playerScore = 0;
-var crystals = [
-    {
-        id: "#crystal1",
-        value: 0
-    },
-
-    {
-        id: "#crystal2",
-        value: 0
-
-    },
-
-    {
-        id: "#crystal3",
-        value: 0
-    },
-
-    {
-        id: "#crystal4",
-        value: 0
-    }
-
-];
-
-
+var crystal1 = 0
+var crystal2 = 0
+var crystal3 = 0
+var crystal4 = 0
 var wins = 0;
 var losses = 0;
 
 
-//Declaring variables that hold references to the places in the HTML where we want to display things
-
+//To copy paste into functions
 $("#wins-text").text(wins);
 $("#losses-text").text(losses);
 $("#target-score-text").text(targetScore);
@@ -63,6 +41,9 @@ $(document).ready(function () {
             $('#start-button').click(function () {
                 generateRandomTargetScore();
                 generateRandomCrystalValues();
+                playerScore = 0;
+                $("#player-score-text").text(playerScore);
+
             });
 
 
@@ -72,26 +53,23 @@ $(document).ready(function () {
 
             }
 
-
-
             function generateRandomCrystalValues() {
-                for (var i = 0; i < crystals.length; i++) {
-                    crstyals[i].value = Math.round(Math.random() * 11) + 1;
-
-                }
-
+                crystal1 = Math.round((Math.random() * 11) +1);
+                console.log("crystal1 is ", crystal1);
+                crystal2 = Math.round((Math.random() * 11) +1), !crystal1;
+                console.log("crystal2 is ", crystal2);
+                crystal3 = Math.round((Math.random() * 11) +1), !crystal1, !crystal2;
+                console.log("crystal3 is ", crystal3);
+                crystal4 = Math.round((Math.random() * 11) +1), !crystal1, !crystal2, !crystal3;
+                console.log("crystal4 is ", crystal4);
             }
 
 
-            $('#reset-button').click(function (fullReset) {
+            $('#reset-button').click(function () {
                 targetScore = 0;
-                $("#target-score-text").text(TargetScore);
+                $("#target-score-text").text(targetScore);
                 playerScore = 0;
                 $("#player-score-text").text(playerScore);
-
-                startGame()
-
-                if (fullReset);
                 wins = 0;
                 $("#wins-text").text(wins);
                 losses = 0;
@@ -105,41 +83,64 @@ $(document).ready(function () {
                 alert("Winner! Winner!");
                 wins++;
                 $("#wins-text").text(wins);
-                resetGame();
             }
-
 
 
             function loser() {
                 alert("Sad Day! Please try again!");
                 losses++;
                 $("#losses-text").text(losses);
-                resetGame();
 
             }
 
-
-
-            for (var i = 0; i < crystals.length; i++) {
-                $(crystals[i].id).on('click', function () {
-                        console.log('clicked on crystal', this);
-
-                        playerScore = playerScore + crystals[i].id
-                        $("#player-score-text").text(playerScore);
-
-
-
-                        if (playerScore === targetScore) {
-                            winner();
-                        } else if (playerScore > targetScore) {
-                            loser();
-                        }
-
-                        startGame();
+            $("#crystal1").on("click", function () {
+                playerScore += crystal1;
+                $("#player-score-text").text(playerScore);
+                if (playerScore === targetScore) {
+                    winner();
+                } else if (playerScore > targetScore) {
+                    loser();
 
 
                 }
 
-                )}
+            });
+
+            $("#crystal2").on("click", function () {
+                playerScore += crystal2;
+                $("#player-score-text").text(playerScore);
+                if (playerScore === targetScore) {
+                    winner();
+                } else if (playerScore > targetScore) {
+                    loser();
+    
+                    }
+
+                });
+
+            $("#crystal3").on("click", function () {
+                playerScore += crystal3;
+                $("#player-score-text").text(playerScore);
+                if (playerScore === targetScore) {
+                    winner();
+                } else if (playerScore > targetScore) {
+                    loser();
+        
+                    }
+    
+                });
+                
+            $("#crystal4").on("click", function () {
+                playerScore += crystal4;
+                $("#player-score-text").text(playerScore);
+                if (playerScore === targetScore) {
+                    winner();
+                } else if (playerScore > targetScore) {
+                    loser();
+            
+                    }
+        
+                });
+                
                 
             });

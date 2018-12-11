@@ -19,6 +19,7 @@ body {
     background-color: #b1f6cb;
 }
 
+
 img {
     width: 100px;
     height: 200px;
@@ -33,15 +34,6 @@ button {
     margin: 30px;
 }
 
-.container {
-    background: url(../images/tree_bark.png);
-    opacity: .75;
-    width: 900px;
-    height: 300px;
-    text-align: center;
-    font-family: 'Walter Turncoat', cursive;
-    border: 1px solid black;
-}
 
 #rules {
     font-family: 'Handlee', cursive;
