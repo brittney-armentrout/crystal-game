@@ -1,5 +1,5 @@
 body {
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     font-weight: bold;
     line-height: 34px;
@@ -12,14 +12,25 @@ body {
   }
 
 .jumbotron {
-    opacity: .75;
+    opacity: .8;
     font-family: 'Crafty Girls', cursive;
+    padding: 0px;
+    margin: 0px;
+    background-color: #b1f6cb;
 }
 
 img {
     width: 100px;
     height: 200px;
-    display: block;
+}
+
+.btn {
+    /* background:#b1f6cb; */
+    margin: 30px;
+}
+
+button {
+    margin: 30px;
 }
 
 .container {
