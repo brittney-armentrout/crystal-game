@@ -12,21 +12,36 @@ body {
   }
 
 .jumbotron {
-    opacity: .8;
+    opacity: .7;
     font-family: 'Crafty Girls', cursive;
     padding: 0px;
     margin: 0px;
     background-color: #b1f6cb;
+    border-bottom: 7px solid #fcf58d;
 }
-
+.navbar {
+    font-family: 'Crafty Girls', cursive;
+    opacity: .85;
+    text-align: center;
+    background-color:#343a40 ;
+    border-bottom: 7px solid #fcf58d;
+    color: #fcf58d;
+}
 
 img {
     width: 100px;
     height: 200px;
 }
 
+
+.card {
+    height: 210px; 
+    margin-top: 30px;
+    opacity: .75;
+    width: 160px;
+}
+
 .btn {
-    /* background:#b1f6cb; */
     margin: 30px;
 }
 
@@ -39,4 +54,17 @@ button {
     font-family: 'Handlee', cursive;
     text-align: left;
     margin-left: 50px;
+}
+
+h3 {
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 36px;
+}
+
+h4 {
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    margin-top: 10px;
 }

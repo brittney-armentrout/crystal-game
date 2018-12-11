@@ -21,7 +21,7 @@
 //Global Variables
 var targetScore = 0;
 var playerScore = 0;
-var crystal1 = 0
+var crystal1 = 0;
 var crystal2 = 0
 var crystal3 = 0
 var crystal4 = 0
@@ -43,7 +43,7 @@ $(document).ready(function () {
                 generateRandomCrystalValues();
                 playerScore = 0;
                 $("#player-score-text").text(playerScore);
-
+ 
             });
 
 
