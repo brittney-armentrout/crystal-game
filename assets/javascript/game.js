@@ -37,6 +37,8 @@ $("#player-score-text").text(playerScore);
 
 
 $(document).ready(function () {
+    generateRandomTargetScore();
+    generateRandomCrystalValues();
 
             $('#start-button').click(function () {
                 generateRandomTargetScore();
@@ -66,8 +68,7 @@ $(document).ready(function () {
 
 
             $('#reset-button').click(function () {
-                targetScore = 0;
-                $("#target-score-text").text(targetScore);
+                generateRandomTargetScore();
                 playerScore = 0;
                 $("#player-score-text").text(playerScore);
                 wins = 0;
@@ -81,6 +82,7 @@ $(document).ready(function () {
 
             function winner() {
                 alert("Winner! Winner!");
+                //AUDIO
                 wins++;
                 $("#wins-text").text(wins);
             }
@@ -88,6 +90,7 @@ $(document).ready(function () {
 
             function loser() {
                 alert("Sad Day! Please try again!");
+                //AUDIO
                 losses++;
                 $("#losses-text").text(losses);
 
